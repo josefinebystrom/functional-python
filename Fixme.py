@@ -20,7 +20,13 @@ def evens(n):
     >>> evens(-1)
     []
     '''
-
+    def eventest(num):
+        if num % 2 == 0:
+            return True
+        else:
+            return False
+    evenlist = list(filter(eventest, range(n+1)))
+    return evenlist
 
 def threes(n):
     '''
@@ -37,7 +43,6 @@ def threes(n):
     >>> threes(50)
     [3, 13, 23, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 43]
     '''
-
 
 def small_words(text):
     '''
