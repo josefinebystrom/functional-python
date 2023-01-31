@@ -43,6 +43,13 @@ def threes(n):
     >>> threes(50)
     [3, 13, 23, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 43]
     '''
+    def threetest(num):
+        if '3' in str(num):
+            return True
+        else:
+            return False
+    threelist = list(filter(threetest, range(n+1)))
+    return threelist
 
 def small_words(text):
     '''
@@ -60,7 +67,13 @@ def small_words(text):
     >>> small_words('a big word is bad')
     ['a', 'big', 'word', 'is', 'bad']
     '''
-
+    def test(string):
+        if len(string)<5:
+            return True
+        else:
+            return False
+    newlist = list(filter(test, text.split()))
+    return newlist
 
 def squares(n):
     '''
@@ -76,7 +89,7 @@ def squares(n):
     >>> squares(10)
     [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
     '''
-
+    return list(map(lambda n: n*n, range(1,n+1)))
 
 def lengths(strings):
     '''
@@ -89,3 +102,4 @@ def lengths(strings):
     >>> lengths(['this','is','a','test'])
     [4, 2, 1, 4]
     '''
+    return (list(map(lambda string: len(string), strings)))
